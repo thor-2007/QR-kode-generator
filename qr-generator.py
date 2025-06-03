@@ -101,12 +101,23 @@ def apne_bilde():
 
 
 
+def apne_mappe():
+    print(" ")
+    # Åpner mappen der programmet kjører
+    os.startfile(os.getcwd())
+
+    print("Fillutforskeren er åpnet. Her finner du alle QR-kodene dine som png filer...")
+    print(" ")
+
+
+
 # Hovedmeny som kjører helt til brukeren velger å avslutte
 while True:
     print("1: Lag QR-kode")
     print("2: Slett QR-kode")
     print("3: Åpne QR-kode")
-    print("4: Avslutt")
+    print("4: Åpne filplasseringen med alle QR-kodene dine i filutforskeren")
+    print("5: Avslutt")
     print(" ")
 
 
@@ -118,6 +129,8 @@ while True:
     elif valg == "3":
         apne_bilde()     # Åpner et bilde
     elif valg == "4":
+        apne_mappe()     # Åpner mappen der bildene er lagret
+    elif valg == "5":
         print(" ")
         print("Programmet avsluttet...")
         break            # Avslutter programmet
